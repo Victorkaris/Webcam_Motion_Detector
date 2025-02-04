@@ -4,6 +4,7 @@ from mailing import send_email
 import os
 import glob
 
+
 def clean_folder():
     images = glob.glob("images/*.png")
     for image in images:
@@ -22,7 +23,6 @@ count = 0
 image_with_object = None  # Initialize this variable outside the loop
 
 while True:
-    status = 0
     check, frame = video.read()
     
     if not check:
@@ -81,6 +81,8 @@ while True:
     print("Status List:", status_list)
     cv2.imshow("Video", frame)
     
+    cv2.imshow("My video", frame)
+
     key = cv2.waitKey(1)
     if key == ord('q'):
         break
