@@ -1,8 +1,9 @@
 import smtplib
+import os
 from email.message import EmailMessage
 
 
-PASSWORD = "ceri qjzo hykm ezpb"
+PASSWORD = os.getenv('PASSWORD')
 SENDER = "iamawinner188@gmail.com"
 RECEIVER = "iamawinner188@gmail.com"
 
